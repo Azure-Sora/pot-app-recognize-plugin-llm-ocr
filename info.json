@@ -1,37 +1,67 @@
 {
-  "id": "plugin.com.pot-app.ocrspace",
+  "id": "plugin.com.pot-app.llm-ocr",
   "plugin_type": "recognize",
-  "icon": "icon.png",
-  "display": "OCR Space",
-  "homepage": "https://github.com/pot-app/pot-app-recognize-plugin-template",
+  "icon": "llm-ocr.svg",
+  "display": "LLM OCR",
+  "homepage": "https://github.com/Azure-Sora/pot-app-recognize-plugin-llm-ocr",
   "needs": [
     {
-      "key": "engine",
-      "display": "Engine",
+      "key": "authType",
+      "display": "认证方式",
       "type": "select",
-      "options": { "1": "Engine 1", "2": "Engine 2", "3": "Engine 3" }
+      "options": {
+        "api-key": "api-key（MiMo 默认）",
+        "bearer": "Authorization: Bearer",
+        "none": "无认证"
+      }
     },
-    { "key": "apikey", "display": "Api Key", "type": "input" }
+    {
+      "key": "baseUrl",
+      "display": "基础 URL（留空使用 MiMo）",
+      "type": "input"
+    },
+    {
+      "key": "apiKey",
+      "display": "API Key",
+      "type": "input"
+    },
+    {
+      "key": "model",
+      "display": "模型 ID（留空使用 mimo-v2.5）",
+      "type": "input"
+    },
+    {
+      "key": "customPrompt",
+      "display": "自定义 OCR 提示词（可选）",
+      "type": "input"
+    }
   ],
   "language": {
-    "auto": "eng",
-    "zh_cn": "chs",
-    "zh_tw": "cht",
-    "en": "eng",
-    "ja": "jpn",
-    "ko": "kor",
-    "fr": "fre",
-    "es": "spa",
-    "ru": "rus",
-    "de": "ger",
-    "it": "ita",
-    "tr": "tur",
-    "pt_pt": "por",
-    "pt_br": "por",
-    "vi": "vie",
-    "th": "tai",
-    "ar": "ara",
-    "hi": "hin",
-    "fa": "per"
+    "auto": "auto",
+    "zh_cn": "Simplified Chinese",
+    "zh_tw": "Traditional Chinese",
+    "en": "English",
+    "ja": "Japanese",
+    "ko": "Korean",
+    "fr": "French",
+    "es": "Spanish",
+    "ru": "Russian",
+    "de": "German",
+    "it": "Italian",
+    "tr": "Turkish",
+    "pt_pt": "European Portuguese",
+    "pt_br": "Brazilian Portuguese",
+    "vi": "Vietnamese",
+    "id": "Indonesian",
+    "th": "Thai",
+    "ms": "Malay",
+    "ar": "Arabic",
+    "hi": "Hindi",
+    "mn_cy": "Mongolian",
+    "mn_mo": "Mongolian",
+    "km": "Khmer",
+    "nb_no": "Norwegian Bokmal",
+    "nn_no": "Norwegian Nynorsk",
+    "fa": "Persian"
   }
 }
