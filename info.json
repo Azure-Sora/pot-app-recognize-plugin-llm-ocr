@@ -31,6 +31,35 @@
       "type": "input"
     },
     {
+      "key": "thinkingMode",
+      "display": "思考模式",
+      "type": "select",
+      "options": {
+        "fast": "快速模式（MiMo 关闭思考）",
+        "provider": "服务商默认"
+      }
+    },
+    {
+      "key": "timeoutSeconds",
+      "display": "请求超时",
+      "type": "select",
+      "options": {
+        "90": "90 秒（推荐）",
+        "60": "60 秒",
+        "120": "120 秒",
+        "0": "不限制"
+      }
+    },
+    {
+      "key": "splitMode",
+      "display": "密集文字切图",
+      "type": "select",
+      "options": {
+        "off": "关闭（单次请求）",
+        "vertical2": "纵向两片并行（实验性）"
+      }
+    },
+    {
       "key": "customPrompt",
       "display": "自定义 OCR 提示词（可选）",
       "type": "input"
